@@ -20,3 +20,5 @@ var port = process.env.PORT || 5000;
 //================
 //START THE SERVER
 //================
+app.listen(port);
+console.log("The app is running!");
