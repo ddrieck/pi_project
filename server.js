@@ -5,6 +5,7 @@
 //assign and call needed packages
 var express = require('express');
 var app = express();
+var mongoose = require("mongoose");
 
 //Load up our route and model config files
 var database = require('./app/configs/database');
