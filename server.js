@@ -21,8 +21,10 @@ var port = process.env.PORT || 5000;
 // more routes for our API will happen here
 //REGISTER OUR ROUTES -------------
 //all of our routes will be prefixed with /api
+app.use(express.static(__dirname + '/public'));
 app.use('/api', routes);
-/*app.use(express.static(__dirname, '/public'));*/
+
+
 //================
 //START THE SERVER
 //================
