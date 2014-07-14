@@ -16,7 +16,7 @@ var Product = require('./app/models/product');
 mongoose.connect(database.url);
 
 //Set our port. Heroku has 5000 as example so we'll do that
-var port = process.env.PORT || 5000;
+var port = Number(process.env.PORT || 5000);
 
 // more routes for our API will happen here
 //REGISTER OUR ROUTES -------------
