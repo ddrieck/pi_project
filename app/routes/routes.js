@@ -64,6 +64,30 @@ module.exports = (function(){
 			});
 		});
 
+	router.route('/products/search/category/:cat_search')
+
+		.get(function(req,res){
+			Product.find({ $or: [ {category : { $regex : req.params.cat_search, $options: 'i'}}, {parentCategory : { $regex : req.params.cat_search, $options: 'i'}}]}, function(err, product){
+				if (err){
+					res.send(err);
+				} else {
+					res.json(product);
+				}
+			});
+		});
+
+	router.route('/products/search/:keyword')
+
+		.get(function(req,res){
+			Product.find({ title : { $regex : req.params.keyword, $options: 'i'}}, function(err, product){
+				if (err){
+					res.send(err);
+				} else {
+					res.json(product);
+				}
+			});
+		});
+
 	//test route to make sure is working (accessed at GET http://localhost:8080/api)
 	router.get('/', function(req, res){
 		res.json({ message : 'hooray! welcome to our api!'});
