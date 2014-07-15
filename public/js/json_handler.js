@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	var apiURL = 'http://localhost:5000/api/products/';
-	var searchURL = 'http://localhost:5000/api/products/search/';
+	var apiURL = 'http://pi-project.herokuapp.com/api/products/';
+	var searchURL = 'http://pi-project.herokuapp.com/api/products/search/';
 
 $('#search-form').submit(function(event){
 		event.preventDefault();
