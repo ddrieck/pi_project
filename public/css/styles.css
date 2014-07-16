@@ -44,3 +44,26 @@
 .results {
 	padding-top: 10%;
 }
+
+.products {
+	width: 80%;
+	border-top: 1px solid black;
+	background-color: #F2F2F2;
+	margin: 0 0 0 10%;
+	padding-left: 3%;
+}
+
+.categories { 
+	font-size: .6em;
+	float: right;
+	margin-right: 5%;
+}
+
+.title {
+	font-weight: bold;
+	font-size: .95em;
+}
+
+.product_text {
+	font-size: .85em;
+}
