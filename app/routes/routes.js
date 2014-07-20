@@ -72,7 +72,7 @@ module.exports = (function(){
 					res.send(err);
 				} else {
 					res.json(product);
-				}
+				};
 			});
 		});
 
