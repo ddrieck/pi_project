@@ -24,8 +24,8 @@ $('#search-form').submit(function(event){
 					$('.results').append("<h1>No Results</h1>");
 				} else {
 					var categoryHier = createCatHier(data);
-					var categories = "";
 					Object.getOwnPropertyNames(categoryHier).forEach(function(val, idx, array){
+							var categories = "";
 							for (var i = 0; i < categoryHier[val].length; i++) {
 							 	categories += "<li>" + categoryHier[val][i] + "</li>";
 							 };
