@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var catURL = 'http://localhost:5000/api/products/category/';
+	var catURL = 'http://pi-project.herokuapp.com/api/products/category/';
 
 	$(".results").on("click", ".item-select",function(){
 		var category = $.trim($(this).children('.category-item').text());
