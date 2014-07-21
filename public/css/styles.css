@@ -67,3 +67,36 @@
 .product_text {
 	font-size: .85em;
 }
+
+.parent-category {
+	margin: 3% 0 0 5%;
+	font-size: .95em;
+}
+
+.category-list {
+	margin: 0 0 0 5%;
+	list-style: none;
+	font-size: .85em;
+}
+
+.category-item {
+	margin-bottom: 2%;
+	width: 35%;
+	display: inline;
+	padding: 0 2% 0 2%;
+	cursor: pointer;
+}
+
+.arrow {
+	font-size: .8em;
+	vertical-align: 25%;
+	cursor: pointer;
+}
+
+.item-select {
+	display: inline;
+}
+
+.product-titles {
+	cursor: default;
+}

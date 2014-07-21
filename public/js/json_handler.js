@@ -27,10 +27,10 @@ $('#search-form').submit(function(event){
 					Object.getOwnPropertyNames(categoryHier).forEach(function(val, idx, array){
 							var categories = "";
 							for (var i = 0; i < categoryHier[val].length; i++) {
-							 	categories += "<li>" + categoryHier[val][i] + "</li>";
+							 	categories += "<div class='item-select'><span class='arrow'>▶</span><li class='category-item'> " + categoryHier[val][i] + "</li></div><br />";
 							 };
 
-							 $('.results').append("<h1>" + val + "</h1><ul>" + categories + "</ul>"); 
+							 $('.results').append("<h1 class='parent-category'>" + val + "</h1><ul class='category-list'>" + categories + "</ul>"); 
 					});
 				};
 			});	
