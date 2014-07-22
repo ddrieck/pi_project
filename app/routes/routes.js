@@ -30,7 +30,7 @@ module.exports = (function(){
 					res.json(products);
 				}
 			});
-		}); \
+		});
 
 	//Our parent categories route. Returns all parent categories
 	//---------------------------------------

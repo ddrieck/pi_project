@@ -16,7 +16,7 @@ $('#search-form').submit(function(event){
 				console.log(data);
 				//If nothing is found show no results text
 				if (data.length === 0){
-					$('.results').append("<h1 class='no-results'>No Results</h1>");
+					$('.results').append("<h1 class='no-results'>Sorry, nothing found. Please try another keyword.</h1>");
 				} else {
 					for (var i = 0; i < data.length; i++) {
 						//Loop through our returned products and create a list of items for people to view. 
@@ -28,7 +28,7 @@ $('#search-form').submit(function(event){
 			//This API call is made if someone choose to search by category instead of product.
 			$.getJSON(searchURL + 'category/' + keyword, function(data){
 				if (data.length === 0){
-					$('.results').append("<h1>No Results</h1>");
+					$('.results').append("<h1 class='no-results'>Sorry, nothing found. Please try another category.</h1>");
 				} else {
 					//There is no parent > category hierarchy so we need to run this function inorder to clean up the data and make it useful.
 					var categoryHier = createCatHier(data);
