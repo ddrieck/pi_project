@@ -4,6 +4,7 @@ $(document).ready(function(){
 
 $('#search-form').submit(function(event){
 		event.preventDefault();
+		$('#all-products').remove();
 		var keyword = $('.search-bar').val();
 		$(".results").empty();
 		$("#search-section").css("margin-top", "2%");

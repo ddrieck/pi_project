@@ -24,7 +24,7 @@ module.exports = (function(){
 
 		//retrieve all bears
 		.get(function(req, res){
-			Product.find().limit(50).exec(function(err, products){
+			Product.find().limit(100).exec(function(err, products){
 				console.log(products);
 				if (err){
 					res.send(err);
@@ -36,11 +36,24 @@ module.exports = (function(){
 
 	//on routes that end with /bears/:bear_id
 	//---------------------------------------
-	router.route('/products/category/parent/:product_cat')
+	router.route('/products/category/parent')
 		
 		//get the bear with that id (accessed at GET http://localhost:8080/api/bears)
 		.get(function(req,res){
-			Product.find({ parentCategory :  req.params.product_cat }, function(err, product){
+			Product.distinct('parentCategory', function(err, product){
+				if (err){
+					res.send(err);
+				} else {
+					product = product.sort();
+					res.json(product);
+				}
+			});
+		});
+		
+	router.route('/products/category/parent/:parent_cat')
+
+		.get(function(req,res){
+			Product.find({ parentCategory :  req.params.parent_cat }, function(err, product){
 				if (err){
 					res.send(err);
 				} else {

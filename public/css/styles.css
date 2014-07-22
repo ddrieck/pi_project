@@ -8,7 +8,7 @@
 }
 
 .select-bar {
-	width: 15%;
+	width: 20%;
 	display: inline-block;
 	height: 36px;
 	float: left;
@@ -87,10 +87,12 @@
 	cursor: pointer;
 }
 
-.arrow {
+.arrow, .parent-arrow {
 	font-size: .8em;
 	vertical-align: 25%;
 	cursor: pointer;
+	margin-left: 3%;
+	padding-right: 4px;
 }
 
 .item-select {
@@ -99,4 +101,21 @@
 
 .product-titles {
 	cursor: default;
+	list-style: square;
+	margin-left: 5%;
+}
+
+.parent-list {
+	cursor: pointer;
+	padding-left: 8px;
+}
+
+.category-title {
+	display: inline;
+	cursor: pointer;
+	padding-left: 8px;
+}
+
+#all-products > p {
+	margin: 3% 0 0 40%;
 }
