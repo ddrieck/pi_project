@@ -15,10 +15,9 @@ var Product = require('./app/models/product');
 //Connect to the database
 mongoose.connect(database.url);
 
-// more routes for our API will happen here
-//REGISTER OUR ROUTES -------------
-//all of our routes will be prefixed with /api
+//Create a static route for our static files and front-end javascript elements
 app.use(express.static(__dirname + '/public'));
+//All of our routes will have /api prefix. Routes are contained in the routes file
 app.use('/api', routes);
 
 
