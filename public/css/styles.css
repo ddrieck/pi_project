@@ -119,3 +119,8 @@
 #all-products > p {
 	margin: 3% 0 0 40%;
 }
+
+.no-results {
+	margin: 3% 0 0 35%;
+	text-transform: uppercase;
+}
